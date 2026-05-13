@@ -16,30 +16,45 @@ public class ConstructorPage {
     @Step("Кликаем на таб <Соусы>")
     public void clickTabSauce() {
         driver.findElement(CONSTRUCTROR_TAB_SAUCE).click();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    @Step("Проверяем заголовок блока <Соусы>")
-    public String checkHeaderSauce() {
-        return driver.findElement(CONSTRUCTROR_TAB_SAUCE_HEADER).getText();
+    @Step("Проверяем таб <Соусы> на активность")
+    public boolean checkTabSauceActive() {
+        return driver.findElement(CONSTRUCTROR_TAB_SUCE_ACTIVE).isDisplayed();
     }
 
     @Step("Кликаем на таб <Начинки>")
     public void clickTabFilling() {
         driver.findElement(CONSTRUCTROR_TAB_FILLING).click();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    @Step("Проверяем заголовок блока <Начинки>")
-    public String checkHeaderFilling() {
-        return driver.findElement(CONSTRUCTROR_TAB_FILLING_HEADER).getText();
+    @Step("Проверяем таб <Начинки> на активность")
+    public boolean checkTabFillingActive() {
+        return driver.findElement(CONSTRUCTROR_TAB_FILLING_ACTIVE).isDisplayed();
     }
 
     @Step("Кликаем на таб <Булки>")
     public void clickTabBulki() {
         driver.findElement(CONSTRUCTROR_TAB_BULKI).click();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    @Step("Проверяем заголовок блока <Булки>")
-    public String checkHeaderBulki() {
-        return driver.findElement(CONSTRUCTROR_TAB_BULKI_HEADER).getText();
+    @Step("Проверяем таб <Булки> на активность")
+    public boolean checkTabBulkiActive() {
+        return driver.findElement(CONSTRUCTROR_TAB_BULKI_ACTIVE).isDisplayed();
     }
 }

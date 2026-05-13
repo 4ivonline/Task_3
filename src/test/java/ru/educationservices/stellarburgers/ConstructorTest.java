@@ -22,8 +22,8 @@ public class ConstructorTest extends BaseTest {
         constructorPage.clickTabFilling();
 
         // Проверяем результат
-        Assertions.assertEquals("Начинки", constructorPage.checkHeaderFilling(),
-                "Таб не соответствует ожидаемому результату. Браузер: " + browserName);
+        Assertions.assertTrue(constructorPage.checkTabFillingActive(),
+                "Должен быть активен таб <Начинки>. Браузер: " + browserName);
     }
 
     @ParameterizedTest
@@ -41,8 +41,8 @@ public class ConstructorTest extends BaseTest {
         constructorPage.clickTabSauce();
 
         // Проверяем результат
-        Assertions.assertEquals("Соусы", constructorPage.checkHeaderSauce(),
-                "Таб не соответствует ожидаемому результату. Браузер: " + browserName);
+        Assertions.assertTrue(constructorPage.checkTabSauceActive(),
+                "Должен быть активен таб <Соусы>. Браузер: " + browserName);
     }
 
     @ParameterizedTest
@@ -63,7 +63,7 @@ public class ConstructorTest extends BaseTest {
         constructorPage.clickTabBulki();
 
         // Проверяем результат
-        Assertions.assertEquals("Булки", constructorPage.checkHeaderBulki(),
-                "Таб не соответствует ожидаемому результату. Браузер: " + browserName);
+        Assertions.assertTrue(constructorPage.checkTabBulkiActive(),
+                "Должен быть активен таб <Булки>. Браузер: " + browserName);
     }
 }
